@@ -24,6 +24,7 @@ $(document).ready(function(){
 
 		$(".clm_principal").remove();
 		var url="https://ejerciciospark.herokuapp.com/Facadea?periodo=" + tipo + "&simbolo=" + simbolo;
+		//var url="http://localhost:4567/Facadea?periodo=" + tipo + "&simbolo=" + simbolo;
 		var	seleccion="Time Series";
 		if(tipo=="Intraday"){
 			url = url + "&intervalo=" + intervalo;
