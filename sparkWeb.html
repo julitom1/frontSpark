@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alphavantage</title>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+
+  <style>
+    body { background-color: #8CA1FF; }
+  </style>
+
+
+
+	
+</head>
+
+
+
+<body >
+	
+
+	
+	<div id="formulario">
+		<h1>Alphavantage</h1>
+		<div id="campos_llenar">
+			<div id="tipo_principal" class="cuestionario">
+				<label for="tipo" class="letra_formulario">tipo</label></br>
+				<select for="tipo" class="elegir" name="tipo" id="tipo">
+					<option value="Intraday">Intraday</option>
+					<option value="Daily">Daily</option>
+					<option value="Weekly">Weekly</option>
+					<option value="Monthly">Monthly</option>
+				</select>	
+				
+			</div>
+			
+			<div id="intervalo_principal" class="cuestionario">
+				<label for="intervalo" class="letra_formulario">Intervalo</label></br>
+				<select for="intervalo" class="elegir" name="intervalo" id="intervalo">
+					<option value="1">1</option>
+					<option value="5">5</option>
+					<option value="15">15</option>
+					<option value="30">30</option>
+					<option value="60">60</option>
+				</select>
+			</div>
+			
+			<div id="simbolo_principal" class="cuestionario">
+				<label for="simbolo" class="letra_formulario">Simbolo</label></br>
+				<input name="simbolo" class="simbolo" id="simbolo" type="name" size="5">
+			</div>
+		</div>
+		</center>	
+		<div id="boton_formulario">
+			<input name="submit" type="button" id="submit" value="Enviar" class="btn btn-success">
+		</div>
+	</div>
+	<h3 id="titulo_tabla">Time Series</h3>
+	<table class="table">
+	<CENTER>
+	  <thead class="thead-dark">
+		<tr>
+			<th scope="col">Date</th>
+		  <th scope="col">Open</th>
+		  <th scope="col">High</th>
+		  <th scope="col">Low</th>
+		  <th scope="col">Close</th>
+		  <th scope="col">Volume</th>
+		</tr>
+	  </thead>
+	  <tbody id="tabla_fechas">
+		
+		
+	  </tbody>
+	  </CENTER>
+	</table>
+	
+	
+</body>
